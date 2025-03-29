@@ -93,16 +93,16 @@
     <p class="video-caption">Abanibi – Eurovision 1978</p>
   </div>
   
-  <div class="video-card">
+  <!-- <div class="video-card">
     <iframe width="300" height="200" 
-      src="https://www.youtube.com/embed/j_a5Fn6VNiE" 
+    src="https://www.youtube.com/embed/j_a5Fn6VNiE"
       title="Izhar Cohen - Ole Ole (Eurovision 1985)" 
       frameborder="0" 
       allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
       allowfullscreen> 
     </iframe> 
     <p class="video-caption">Ole Ole – Eurovision 1985</p> 
-  </div>  
+  </div>   -->
 
   
 </div>
@@ -131,8 +131,27 @@
 <br/>
 
 
-<h1>QR</h1>
+<h1>QR Code</h1>
 <br/>
+<!-- Section Title -->
+
+<!-- Card Container -->
+<div style="
+  background: white;
+  max-width: 300px;
+  margin: 20px auto;
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  border-bottom: 4px solid #00aaff;
+">
+  <!-- Subtitle -->
+  <p style="font-weight: 600; color: #2c3e50;">סרקו את הקוד כדי להגיע לעמוד של יזהר כהן</p>
+
+  <!-- QR Code Image -->
+  <img src="images/qr code.png" alt="Yehoram QR Code" style="width: 250px; height: 250px; margin-top: 10px;">
+</div>
 <br/>
 <br/>
 </section>
@@ -155,6 +174,39 @@
 
 <h1>Contact Me</h1>
 <br/>
+<table border="0" style="width: 100%; direction: rtl; border-collapse: collapse; border: none;">
+
+  <tr>
+    <td colspan="2">
+      <div style="max-width: 700px; margin: 0 auto; padding: 20px; border-radius: 15px; background-color: #f8f9fa; box-shadow: 0 0 10px rgba(0,0,0,0.1); direction: rtl;">
+        
+
+        <form>
+          <label for="email"><strong>כתובת מייל:</strong></label><br>
+          <input type="email" id="email" name="email" placeholder="your@email.com" style="width: 100%; padding: 10px; margin: 5px 0 15px;"><br>
+
+          <label for="subject"><strong>נושא ההודעה:</strong></label><br>
+          <input type="text" id="subject" name="subject" placeholder="נושא ההודעה" style="width: 100%; padding: 10px; margin: 5px 0 15px;"><br>
+
+          <label for="message"><strong>תוכן ההודעה:</strong></label><br>
+          <textarea id="message" name="message" placeholder="כתבו את ההודעה כאן..." rows="5" style="width: 100%; padding: 10px; margin: 5px 0 15px;"></textarea><br>
+
+          <label for="emoji"><strong>הוספת אימוג'י:</strong></label><br>
+          <select id="emoji" name="emoji" style="width: 100%; padding: 10px; margin: 5px 0 15px;">
+            <option value="😊">😊</option>
+            <option value="👍">👍</option>
+            <option value="🎉">🎉</option>
+            <option value="❤️">❤️</option>
+          </select>
+
+          <p id="selected-emoji">אימוג'י נבחר:</p>
+
+          <button type="submit" id="submit-button" class="submit-button" disabled>שלח</button> 
+        </form>
+      </div>
+    </td>
+  </tr>
+</table>
 <br/>
 <br/>
 </section>
@@ -179,7 +231,6 @@
 
   document.addEventListener("DOMContentLoaded", function () {
     document.getElementById("like-count").textContent = likes;
-    // לא נציג את ההודעה כאן מראש
   });
 
   function addLike() {
@@ -201,6 +252,52 @@
     localStorage.setItem("likeCount", likes);
     localStorage.setItem("hasLiked", true);
   }
+
+  // Emoji selection functionality
+  const emojiSelect = document.getElementById('emoji');
+  const selectedEmojiParagraph = document.getElementById('selected-emoji');
+
+  emojiSelect.addEventListener('change', function() {
+    selectedEmojiParagraph.textContent = 'אימוג\'י נבחר: ' + this.value;
+  });
+
+  // Prevent form submission and show alert
+  document.querySelector('form').addEventListener('submit', function(e) {
+    e.preventDefault();
+    alert('ההודעה נשלחה!');
+  });
+
+
+  const form = document.getElementById('contact-form');
+  const submitButton = document.getElementById('submit-button');
+
+  const requiredFields = ['email', 'subject', 'message', 'emoji'];
+
+  function checkFormValidity() {
+      const isValid = requiredFields.every(id => {
+      const el = document.getElementById(id);
+      return el.value.trim() !== '';
+    });
+    submitButton.disabled = !isValid;
+  }
+
+  requiredFields.forEach(id => {
+    document.getElementById(id).addEventListener('input', checkFormValidity);
+    document.getElementById(id).addEventListener('change', checkFormValidity);
+  });
+
+  document.getElementById('emoji').addEventListener('change', function () {
+    document.getElementById('selected-emoji').textContent = 'אימוג\'י נבחר: ' + this.value;
+  });
+
+  form.addEventListener('submit', function (e) {
+    e.preventDefault(); // Prevent default form submission
+    alert('ההודעה נשלחה בהצלחה!');
+    form.reset();
+    submitButton.disabled = true;
+    document.getElementById('selected-emoji').textContent = 'אימוג\'י נבחר:';
+  });
+</script>
   
 </script>
 </body>
