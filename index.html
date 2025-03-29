@@ -93,17 +93,6 @@
     <p class="video-caption">Abanibi – Eurovision 1978</p>
   </div>
   
-  <!-- <div class="video-card">
-    <iframe width="300" height="200" 
-    src="https://www.youtube.com/embed/j_a5Fn6VNiE"
-      title="Izhar Cohen - Ole Ole (Eurovision 1985)" 
-      frameborder="0" 
-      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-      allowfullscreen> 
-    </iframe> 
-    <p class="video-caption">Ole Ole – Eurovision 1985</p> 
-  </div>   -->
-
   
 </div>
 
@@ -165,7 +154,73 @@
 <br/>
 <br/>
 <br/>
-</section>
+
+<h2 style="text-align: center; direction: rtl; font-family: Arial, sans-serif;">
+  <span style="text-decoration: underline;">שאלה 1:</span> ציין שלושה הבדלים עיקריים בין שלושת הדורות של האינטרנט (web1, web2, web3)
+  <h2 style="text-align: center; direction: rtl; font-family: Arial, sans-serif;">
+    <span style="text-decoration: underline;">תשובה לשאלה 1:</span> (נציג את שלושת סוגי ההבדלים בטבלה הבאה)
+  </h2>
+  <table dir="rtl">
+    <thead>
+      <tr>
+        <th>ההבדל</th>
+        <th>Web 1.0</th>
+        <th>Web 2.0</th>
+        <th>Web 3.0</th>
+        
+      </tr>
+    </thead>
+    <tbody rtl = >
+      <tr>
+        <td>סוג התוכן</td>
+        <td>קריאה בלבד (Read-only)</td>
+        <td>קריאה וכתיבה , תוכן אינטראקטיבי ודינמי  </td>
+        <td>תוכן מותאם אישית, סמנטי ואינטליגנטי (Semantic Web)</td>        
+      </tr>
+      <tr>
+        <td>אופי האינטראקציה</td>
+        <td>אתרים סטטיים: המשתמש צורך תוכן ללא אפשרות תגובה או שיתוף</td>
+        <td>זירה חברתית: המשתמשים יוצרים, מגיבים ומשתפים (רשתות חברתיות, בלוגים)</td>
+        <td>אינטראקציה חכמה בהתאמה אישית בעזרת AI והקשר תוכן (Context aware)</td>
+
+      </tr>
+      <tr>
+        <td>טכנולוגיות</td>
+        <td>HTML בסיסי, דפים סטטיים</td>
+        <td>AJAX, JavaScript, APIs, שירותים חכמים</td>
+        <td>טכנולוגיות מבוזרות (Blockchain), למידת מכונה ובינה מלאכותית</td>
+      </tr>
+    </tbody>
+  </table>
+  <br/>
+  <br/>
+  <br/>
+  <h2 style="text-align: center; direction: rtl; font-family: Arial, sans-serif;">
+    <span style="text-decoration: underline;">שאלה 2:</span>
+    הסבר את ההבדלים שצוינו בשאלה 1 על ידי דוגמה של תרחיש שימוש (use case).
+    <h2 style="text-align: center; direction: rtl; font-family: Arial, sans-serif;">
+      <span style="text-decoration: underline;">תשובה לשאלה 2:</span>
+      (תרחיש השימוש שנבחר: המשתמש מחפש מידע על יעד מסוים שהוא מתכוון לטייל בו בתאילנד)
+    </h2>
+      <div class="web-box">
+        <strong>Web 1.0 (סטטי):</strong><br/>
+        המשתמש נכנס לאתר תיירות פשוט ומקבל דף HTML סטטי עם תיאור כללי של תאילנד,  
+        מידע כללי כמו אקלים, ערים עיקריות, ומקומות תיירותיים, אך ללא תגובות או עדכונים.
+      </div>
+      
+      <div class="web-box">
+        <strong>Web 2.0 (חברתי ואינטראקטיבי):</strong><br/>
+        המשתמש גולש לבלוגים, רשתות חברתיות ואתרי חוויות משתמש כמו TripAdvisor או YouTube.  
+        הוא קורא תגובות, צופה בסרטונים, שואל שאלות בקבוצות פייסבוק, מקבל המלצות אישיות ממטיילים אחרים,  
+        ויכול גם לפרסם את החוויה שלו אחרי הטיול.
+      </div>
+      
+      <div class="web-box">
+        <strong>Web 3.0 (מותאם חכם ומבוזר):</strong><br/>
+        המשתמש מקבל המלצות מותאמות אישית לטיול בתאילנד בהתבסס על תחומי עניין, תקציב, עונות מועדפות וניסיון עבר.  
+        המידע נאסף ממקורות מבוזרים, ניתוח AI של פרופיל המשתמש, ונתונים מאומתים מאנשים דומים לו.  
+        כל המידע נשמר בפרטיות, ללא תלות בפלטפורמה מרכזית, עם שליטה מלאה של המשתמש על הנתונים האישיים שלו.
+      </div>
 
 <section id="contact" class="section">
 <br/>
@@ -237,7 +292,7 @@
     const message = document.getElementById("like-message");
 
     if (hasLiked) {
-      message.textContent = "כבר הצבעת ללייק הזה 😊";
+      message.textContent = "כבר נתת לייק אחד בעבר 😊";
       message.style.display = "block";
       return;
     }
