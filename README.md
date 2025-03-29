@@ -34,9 +34,3 @@ Or copy the link:
 `https://wed-2023.github.io/211381009/`
 
 ---
-
-## 🆔 Submission Info
-
-- **Student ID:** `211381009`
-
----
