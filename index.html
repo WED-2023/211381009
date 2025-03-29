@@ -1,129 +1,137 @@
 <!DOCTYPE html>
 <html>
 <head>
+<title>Izhar Cohen</title>
+<link rel="icon" type="image/png "href="images/logo.jpg">
 <link rel="stylesheet" type="text/css" href="style.css" />
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<meta http-equiv="Content-Security-Policy" content="frame-src https://www.youtube.com;">
 </head>
 <body>
-<div id="menu">
-<li><a href="#about">About Me</a></li>
-<li><a href="#photos">My Photos</a></li>
-<li><a href="#playlist">My Playlist</a></li>
-<li><a href="#like">Like</a></li>
-<li><a href="#qrcoder">QR code</a></li>
-<li><a href="#spa">Q&A</a></li>
-<li><a href="#contact">Contact Me</a></li>
-</div>
+  <header class="top-menu">
+    <div class="logo-section">
+      <img src="images/logo.jpg" alt="Logo" class="logo">
+    </div>
+    <nav class="nav-links">
+      <a href="#about">About Me</a>
+      <a href="#photos">My Photos</a>
+      <a href="#playlist">My Playlist</a>
+      <a href="#like">Like</a>
+      <a href="#qrcoder">QR Code</a>
+      <a href="#spa">Q&A</a>
+      <a href="#contact">Contact Me</a>
+    </nav>
+  </header>
 		  
-<section id="about" class="section">
+<section id="about" class="section" dir="rtl">
 <br/>
+
+<h1>About Me</h1>
+<div class="text-box">
+  <p>
+    יזהר כהן הוא זמר ישראלי מצליח ואהוב, שנולד בשנת 1951 למשפחה מוזיקלית ממוצא תימני.
+    אביו, שלמה כהן, היה החזן הראשי של תל אביב, וכל אחיו עסקו במוזיקה – כך שספג את המוזיקה מבית כבר מגיל צעיר.
+    בצעירותו שירת בצוות הווי הנח"ל, מה שהיווה עבורו קרש קפיצה לעולם הבמה.
+  </p>
+  
+  <p>
+    במהלך שנות ה־70 הפך לאחת הדמויות הבולטות בזמר הישראלי עם להיטים מצליחים כמו
+    "ניגונה של השכונה", "שיר כלולות" ו"לקראת ערב".
+    בשנת 1978 פרץ לתודעה הבינלאומית כאשר ייצג את ישראל באירוויזיון עם השיר "אבניבי"
+    וזכה במקום הראשון – הזכייה הראשונה של ישראל בתחרות זו.
+    בהמשך, השתתף באירוויזיון גם ב־1985 עם השיר "עולה עולה", שהגיע למקום החמישי.
+  </p>
+  
+  <p>
+    תחומי העניין של כהן כוללים מוזיקה ים־תיכונית, תרבות ישראלית ואופנה.
+    הוא ידוע בהופעתו הססגונית, בתסרוקת האייקונית שלו ובכישרון הבימתי יוצא הדופן.
+  </p>
+  
+  <p>
+    יזהר כהן הושפע ממוזיקה מזרחית מסורתית, ממוזיקת פופ עולמית ומהלהקות הצבאיות של התקופה.
+    הוא עצמו נחשב לדמות פורצת דרך במוזיקה הישראלית וממשיך להופיע ולרגש קהלים עד היום,
+    תוך שהוא משאיר חותם בלתי נשכח על התרבות הישראלית.
+  </p>
+  
+</div>
+
 <br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-about me
-<br/>
-<br/>
-<br/>
+
 </section>
 
 <section id="photos" class="section">
 <br/>
 <br/>
+
+<h1>My Photos</h1>
 <br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-my photos
-<br/>
+<div class="photo-gallery">
+  <img src="images/image1.jpg" alt="Photo 1" class="photo">
+  <img src="images/image2.jpg" alt="Photo 2" class="photo">
+  <img src="images/image3.jpg" alt="Photo 3" class="photo">
+  <img src="images/image4.jpg" alt="Photo 4" class="photo">
+  <img src="images/image5.jpg" alt="Photo 5" class="photo">
+</div>
+
 <br/>
 <br/>
 </section>
 
 <section id="playlist" class="section">
 <br/>
+<h1>My Playlist</h1>
 <br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-my playlist
-<br/>
-<br/>
+<div class="video-gallery">
+  <div class="video-card">
+    <iframe width="300" height="200"
+      src="https://www.youtube.com/embed/pOH-sojmLJY"
+      title="Izhar Cohen - Abanibi (Eurovision 1978)"
+      frameborder="0"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+      allowfullscreen>
+    </iframe>
+    <p class="video-caption">Abanibi – Eurovision 1978</p>
+  </div>
+  
+  <div class="video-card">
+    <iframe width="300" height="200" 
+      src="https://www.youtube.com/embed/j_a5Fn6VNiE" 
+      title="Izhar Cohen - Ole Ole (Eurovision 1985)" 
+      frameborder="0" 
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+      allowfullscreen> 
+    </iframe> 
+    <p class="video-caption">Ole Ole – Eurovision 1985</p> 
+  </div>  
+
+  
+</div>
+
+
 <br/>
 </section>
 
 <section id="like" class="section">
 <br/>
 <br/>
+
+<h1>Like</h1>
+<div class="like-container">
+  <p class="like-text" dir="rtl">אם אתם אוהבים את יזהר – תנו לייק 😊</p>
+  <button class="like-button" onclick="addLike()">
+    ❤️ <span id="like-count">0</span> Likes
+  </button>
+  <p id="like-message" class="like-message" dir="rtl"></p>
+</div>
 <br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-give me a like
-<br/>
-<br/>
-<br/>
+
 </section>
 
 <section id="qrcoder" class="section">
 <br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-scan my code
+
+
+<h1>QR</h1>
 <br/>
 <br/>
 <br/>
@@ -133,20 +141,8 @@ scan my code
 <br/>
 <br/>
 <br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-ans
+
+<h1>Q&A</h1>
 <br/>
 <br/>
 <br/>
@@ -156,38 +152,56 @@ ans
 <br/>
 <br/>
 <br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-contact me
+
+<h1>Contact Me</h1>
 <br/>
 <br/>
 <br/>
 </section>
 
 
+
 <script type="text/javascript">
-$(function(){
-  $("#nav a").click(function(e){
-    e.preventDefault();
-    $('html,body').scrollTo(this.hash,this.hash); 
+  $(function(){
+    $("#nav a").click(function(e){
+      e.preventDefault();
+      $('html,body').scrollTo(this.hash, this.hash); 
+    });
   });
-});
+
+  $(document).scroll(function() {
+    $('#menu').toggle($(this).scrollTop() > 1000);
+  });
+
+  // Like button functionality
+  let likes = localStorage.getItem("likeCount") || 0;
+  let hasLiked = localStorage.getItem("hasLiked") === "true";
+
+  document.addEventListener("DOMContentLoaded", function () {
+    document.getElementById("like-count").textContent = likes;
+    // לא נציג את ההודעה כאן מראש
+  });
+
+  function addLike() {
+    const message = document.getElementById("like-message");
+
+    if (hasLiked) {
+      message.textContent = "כבר הצבעת ללייק הזה 😊";
+      message.style.display = "block";
+      return;
+    }
+
+    likes++;
+    hasLiked = true;
+
+    document.getElementById("like-count").textContent = likes;
+    message.textContent = "תודה על הלייק! ❤️";
+    message.style.display = "block";
+
+    localStorage.setItem("likeCount", likes);
+    localStorage.setItem("hasLiked", true);
+  }
+  
 </script>
-<script type="text/javascript">
- $(document).scroll(function() {
-    $('#menu').toggle($(this).scrollTop()>1000)
- });​
- </script>
 </body>
 </html>

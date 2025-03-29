@@ -1,7 +1,197 @@
-#menu
-{
-	position: fixed;
-	width: 100%;
-	height: 35px;
-	background: white;
+.top-menu {
+	background-color: #00cfff;
+	display: flex;
+	justify-content: space-between; /* space between logo and menu items */
+	align-items: center;
+	padding: 10px 20px;
+	flex-wrap: wrap; /* allows items to wrap on smaller screens */
+  }
+
+.logo-section {
+  display: flex;
+  align-items: center;
+  gap: 10px;
 }
+
+.logo {
+	width: 40px;
+	height: 40px;
+	border-radius: 8px;
+	transition: transform 0.3s ease, box-shadow 0.3s ease;/* smooth transition */
+	cursor: pointer; /* cursor changes to pointer on hover */
+}
+
+.logo:hover {
+	transform: scale(1.1); /* zoom effect on hover */
+	box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* shadow effect on hover */
+}
+  
+.site-title {
+	font-size: 20px;
+	color: white;
+	font-weight: bold;
+}
+  
+.nav-links {
+	display: flex;
+	gap: 20px; /* spacing between menu items */
+	flex-wrap: wrap; /* allows items to wrap on smaller screens */
+	justify-content: center; /* center the items */
+	flex: 1; /* allows the menu to take available space */
+}
+  
+.nav-links a {
+	color: white;
+	text-decoration: none;
+	font-weight: bold;
+}
+  
+.nav-links a:hover {
+	text-decoration: underline;
+}
+
+h1 {
+	position: relative;
+	text-align: center;
+	font-size: 2em;
+	margin: 0;
+	padding: 10px 0;
+	color: black; /* optional */
+}
+  
+h1 {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	font-size: 2em;
+	margin: 40px 0;
+	gap: 20px; /* space between text and lines */
+}
+  
+  h1::before,
+  h1::after {
+	content: "";
+	flex: 1;
+	height: 3px;
+	background-color: rgb(173, 186, 230); /* or any color */
+  }
+
+
+.text-box {
+	background-color: linear-gradient(to bottom, #00cfff, #00aaff); /* gradient background */
+	padding: 30px;
+	border-radius: 12px;
+	box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05); /* subtle shadow */
+	margin: 0 auto; 
+	max-width: 800px; /* max width for larger screens */
+	font-size: 1.1em; /* larger font size for better readability */
+	line-height: 2; /* line height for better readability */
+	color: #333; /* text color */
+	width: 70%; /* width for smaller screens */
+	text-align: center; /* center text */
+  }
+
+
+.photo-gallery {
+	display: flex;
+	flex-wrap: wrap; /* allows items to wrap on smaller screens */
+	justify-content: center; /* center the items */
+	gap: 20px; /* spacing between images */
+	margin-top: 20px; /* space above the gallery */
+}
+
+.photo-gallery img {
+	width: 200px; /* fixed width for images */
+	height: 250px; /* fixed height for images */
+	border-radius: 10px; /* rounded corners */
+	object-fit: cover; /* cover the area without distortion */
+	box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* subtle shadow */
+	transition: transform 0.3s ease, box-shadow 0.3s ease; /* smooth transition */
+}
+
+
+.photo-gallery img:hover {
+	transform: scale(1.05); /* zoom effect on hover */
+	box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2); /* deeper shadow on hover */
+}
+
+
+.video-gallery {
+	display: flex;
+	justify-content: center;
+	gap: 30px;
+	flex-wrap: wrap;
+	margin-top: 30px;
+  }
+  
+  .video-card {
+	position: relative;
+	width: 320px;
+	background-color: #f8f8f8; /* light background for video cards */
+	border-radius: 12px;
+	box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* subtle shadow */
+	text-align: center;
+	transition: transform 0.3s ease;
+  }
+  
+  .video-card video {
+	width: 100%; /* full width of the card */
+	height: 200px; /* maintain aspect ratio */	
+	object-fit: cover; /* cover the area without distortion */		
+	border-radius: 8px; /* rounded corners */
+  }
+  
+  .video-card:hover {
+	transform: scale(1.03);
+	box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2); /* deeper shadow on hover */
+  }
+  
+  .video-caption {
+	margin-top: 10px;
+	font-size: 1em;
+	color: #333;
+
+  }
+  
+  /* Hover effect to show caption */
+  .video-card:hover .video-caption {
+	opacity: 1;
+  }
+
+  .like-container {
+	text-align: center;
+	margin-top: 30px;
+  }	
+
+  .like-button {
+	background-color: #00cfff; /* button color */
+	color: white; /* text color */
+	padding: 15px 20px; /* padding for button */
+	border: none; /* no border */
+	border-radius: 50px; /* rounded corners */
+	cursor: pointer; /* pointer cursor on hover */
+	font-size: 1.5em; /* larger font size */
+	transition: background-color 0.3s ease, transform 0.3s ease; /* smooth transition */
+	box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* subtle shadow */
+  }
+
+  .like-button:hover {
+	background-color: #0099cc; /* darker shade on hover */
+	transform: scale(1.05); /* zoom effect on hover */
+  }
+
+  .like-text {
+	font-size: 1.1em; /* larger font size */
+	color: #333; /* text color */
+	font-weight: bold; /* bold text */
+	margin-top: 15px; /* space above the text */
+
+  }
+
+  .like-message {
+	margin-top: 10px;
+	font-size: 1em;
+	color: #2b3e50;
+	font-weight: bold;
+	display: none; /* hide by default */
+  }
