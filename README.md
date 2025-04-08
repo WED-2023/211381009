@@ -15,7 +15,8 @@ The site includes the following components:
 - 🔹 **Like** – Interactive like button  
 - 🔹 **QR Code** – Quick scan QR code  
 - 🔹 **Q&A** – Questions and answers about the generations of the internet (Web1, Web2, Web3)  
-- 🔹 **Contact Me** – Contact form including a required emoji field
+- 🔹 **Contact Me** – Contact form including a required emoji field  
+   - 📩 Every form submission is automatically sent to my personal email at **yali4343@gmail.com**
 
 ---
 
@@ -34,3 +35,7 @@ Or copy the link:
 `https://wed-2023.github.io/211381009/`
 
 ---
+
+## 🆔 Student ID
+
+**211381009**
