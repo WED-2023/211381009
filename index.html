@@ -2,17 +2,29 @@
 <html>
 <head>
 <title>Izhar Cohen</title>
-<link rel="icon" type="image/png "href="images/logo.jpg">
+<<!-- Favicon -->
+<link rel="icon" type="image/png" href="images/logo.jpg">
+
+<!-- External CSS stylesheet -->
 <link rel="stylesheet" type="text/css" href="style.css" />
+
+<!-- jQuery library -->
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+<!-- EmailJS library for email functionality -->
+<script src="https://cdn.emailjs.com/sdk/latest/email.min.js"></script>
+
+<!-- Allow YouTube embeds -->
 <meta http-equiv="Content-Security-Policy" content="frame-src https://www.youtube.com;">
 </head>
 <body>
+  <!-- Header: Logo and Navigation Menu -->
   <header class="top-menu">
     <div class="logo-section">
       <img src="images/logo.jpg" alt="Logo" class="logo">
     </div>
     <nav class="nav-links">
+      <!-- Anchor links to page sections -->
       <a href="#about">About Me</a>
       <a href="#photos">My Photos</a>
       <a href="#playlist">My Playlist</a>
@@ -22,7 +34,8 @@
       <a href="#contact">Contact Me</a>
     </nav>
   </header>
-		  
+
+<!-- About Me Section -->
 <section id="about" class="section" dir="rtl">
 <br/>
 
@@ -59,6 +72,7 @@
 
 </section>
 
+<!-- Photo Gallery Section -->
 <section id="photos" class="section">
 <br/>
 <br/>
@@ -77,14 +91,16 @@
 <br/>
 </section>
 
+<!-- Playlist (YouTube Videos) Section -->
 <section id="playlist" class="section">
 <br/>
 <h1>My Playlist</h1>
 <br/>
 <div class="video-gallery">
+  <!-- Embedded YouTube videos -->
   <div class="video-card">
     <iframe width="300" height="200"
-      src="https://www.youtube.com/embed/pOH-sojmLJY"
+      src="https://www.youtube.com/embed/DzGnWSIuJvo"
       title="Izhar Cohen - Abanibi (Eurovision 1978)"
       frameborder="0"
       allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
@@ -92,14 +108,12 @@
     </iframe>
     <p class="video-caption">Abanibi – Eurovision 1978</p>
   </div>
-  
-  
+
 </div>
-
-
 <br/>
 </section>
 
+<!-- Like Section -->
 <section id="like" class="section">
 <br/>
 <br/>
@@ -107,19 +121,18 @@
 <h1>Like</h1>
 <div class="like-container">
   <p class="like-text" dir="rtl">אם אתם אוהבים את יזהר – תנו לייק 😊</p>
+  <!-- Like button triggers JavaScript function -->
   <button class="like-button" onclick="addLike()">
     ❤️ <span id="like-count">0</span> Likes
   </button>
   <p id="like-message" class="like-message" dir="rtl"></p>
 </div>
 <br/>
-
 </section>
 
+<!-- QR Code Section -->
 <section id="qrcoder" class="section">
 <br/>
-
-
 <h1>QR Code</h1>
 <br/>
 <!-- Section Title -->
@@ -133,18 +146,15 @@
   border-radius: 15px;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
   text-align: center;
-  border-bottom: 4px solid #00aaff;
-">
-  <!-- Subtitle -->
+  border-bottom: 4px solid #00aaff;">
   <p style="font-weight: 600; color: #2c3e50;">סרקו את הקוד כדי להגיע לעמוד של יזהר כהן</p>
-
-  <!-- QR Code Image -->
   <img src="images/qr code.png" alt="Yehoram QR Code" style="width: 250px; height: 250px; margin-top: 10px;">
 </div>
 <br/>
 <br/>
 </section>
 
+<!-- Q&A Section: Web Generations -->
 <section id="spa" class="section">
 <br/>
 <br/>
@@ -154,7 +164,7 @@
 <br/>
 <br/>
 <br/>
-
+<!-- Question 1: Differences between Web 1.0, 2.0, and 3.0 -->
 <h2 style="text-align: center; direction: rtl; font-family: Arial, sans-serif;">
   <span style="text-decoration: underline;">שאלה 1:</span> ציין שלושה הבדלים עיקריים בין שלושת הדורות של האינטרנט (web1, web2, web3)
   <h2 style="text-align: center; direction: rtl; font-family: Arial, sans-serif;">
@@ -195,6 +205,8 @@
   <br/>
   <br/>
   <br/>
+
+  <!-- Question 2: Use Case Comparison -->
   <h2 style="text-align: center; direction: rtl; font-family: Arial, sans-serif;">
     <span style="text-decoration: underline;">שאלה 2:</span>
     הסבר את ההבדלים שצוינו בשאלה 1 על ידי דוגמה של תרחיש שימוש (use case).
@@ -222,6 +234,7 @@
         כל המידע נשמר בפרטיות, ללא תלות בפלטפורמה מרכזית, עם שליטה מלאה של המשתמש על הנתונים האישיים שלו.
       </div>
 
+<!-- Contact Form Section -->      
 <section id="contact" class="section">
 <br/>
 <br/>
@@ -233,29 +246,47 @@
 
   <tr>
     <td colspan="2">
+      <!-- Contact Form -->
       <div style="max-width: 700px; margin: 0 auto; padding: 20px; border-radius: 15px; background-color: #f8f9fa; box-shadow: 0 0 10px rgba(0,0,0,0.1); direction: rtl;">
-        
-
-        <form>
+        <form class="contact-form" id="emailForm" action="https://formspree.io/f/mblgpelw" method="POST">
+          <!-- Email input -->
           <label for="email"><strong>כתובת מייל:</strong></label><br>
           <input type="email" id="email" name="email" placeholder="your@email.com" style="width: 100%; padding: 10px; margin: 5px 0 15px;"><br>
 
+          <!-- Subject input -->
           <label for="subject"><strong>נושא ההודעה:</strong></label><br>
           <input type="text" id="subject" name="subject" placeholder="נושא ההודעה" style="width: 100%; padding: 10px; margin: 5px 0 15px;"><br>
 
+          <!-- Message input -->
           <label for="message"><strong>תוכן ההודעה:</strong></label><br>
           <textarea id="message" name="message" placeholder="כתבו את ההודעה כאן..." rows="5" style="width: 100%; padding: 10px; margin: 5px 0 15px;"></textarea><br>
 
+          <!-- Emoji selector -->
           <label for="emoji"><strong>הוספת אימוג'י:</strong></label><br>
           <select id="emoji" name="emoji" style="width: 100%; padding: 10px; margin: 5px 0 15px;">
             <option value="😊">😊</option>
             <option value="👍">👍</option>
             <option value="🎉">🎉</option>
             <option value="❤️">❤️</option>
+            <option value="🌟">🌟</option>
+            <option value="😎">😎</option>
+            <option value="💡">💡</option>
+            <option value="🌈">🌈</option>
+            <option value="🚀">🚀</option>
+            <option value="🎶">🎶</option>
+            <option value="🌍">🌍</option>
+            <option value="✨">✨</option>
+            <option value="💖">💖</option>
+            <option value="🌺">🌺</option>
+            <option value="🌸">🌸</option>
+            <option value="🌼">🌼</option>
+            <option value="🌻">🌻</option>
           </select>
 
+          <!-- Selected emoji text -->
           <p id="selected-emoji">אימוג'י נבחר:</p>
 
+          <!-- Submit button -->
           <button type="submit" id="submit-button" class="submit-button" disabled>שלח</button> 
         </form>
       </div>
@@ -265,95 +296,10 @@
 <br/>
 <br/>
 </section>
-
-
-
-<script type="text/javascript">
-  $(function(){
-    $("#nav a").click(function(e){
-      e.preventDefault();
-      $('html,body').scrollTo(this.hash, this.hash); 
-    });
-  });
-
-  $(document).scroll(function() {
-    $('#menu').toggle($(this).scrollTop() > 1000);
-  });
-
-  // Like button functionality
-  let likes = localStorage.getItem("likeCount") || 0;
-  let hasLiked = localStorage.getItem("hasLiked") === "true";
-
-  document.addEventListener("DOMContentLoaded", function () {
-    document.getElementById("like-count").textContent = likes;
-  });
-
-  function addLike() {
-    const message = document.getElementById("like-message");
-
-    if (hasLiked) {
-      message.textContent = "כבר נתת לייק אחד בעבר 😊";
-      message.style.display = "block";
-      return;
-    }
-
-    likes++;
-    hasLiked = true;
-
-    document.getElementById("like-count").textContent = likes;
-    message.textContent = "תודה על הלייק! ❤️";
-    message.style.display = "block";
-
-    localStorage.setItem("likeCount", likes);
-    localStorage.setItem("hasLiked", true);
-  }
-
-  // Emoji selection functionality
-  const emojiSelect = document.getElementById('emoji');
-  const selectedEmojiParagraph = document.getElementById('selected-emoji');
-
-  emojiSelect.addEventListener('change', function() {
-    selectedEmojiParagraph.textContent = 'אימוג\'י נבחר: ' + this.value;
-  });
-
-  // Prevent form submission and show alert
-  document.querySelector('form').addEventListener('submit', function(e) {
-    e.preventDefault();
-    alert('ההודעה נשלחה!');
-  });
-
-
-  const form = document.getElementById('contact-form');
-  const submitButton = document.getElementById('submit-button');
-
-  const requiredFields = ['email', 'subject', 'message', 'emoji'];
-
-  function checkFormValidity() {
-      const isValid = requiredFields.every(id => {
-      const el = document.getElementById(id);
-      return el.value.trim() !== '';
-    });
-    submitButton.disabled = !isValid;
-  }
-
-  requiredFields.forEach(id => {
-    document.getElementById(id).addEventListener('input', checkFormValidity);
-    document.getElementById(id).addEventListener('change', checkFormValidity);
-  });
-
-  document.getElementById('emoji').addEventListener('change', function () {
-    document.getElementById('selected-emoji').textContent = 'אימוג\'י נבחר: ' + this.value;
-  });
-
-  form.addEventListener('submit', function (e) {
-    e.preventDefault(); // Prevent default form submission
-    alert('ההודעה נשלחה בהצלחה!');
-    form.reset();
-    submitButton.disabled = true;
-    document.getElementById('selected-emoji').textContent = 'אימוג\'י נבחר:';
-  });
-</script>
   
-</script>
+
+<!-- Link to external JavaScript file -->
+<script src="main.js"></script>
+
 </body>
 </html>
